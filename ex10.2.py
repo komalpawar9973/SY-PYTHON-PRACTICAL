@@ -1,13 +1,24 @@
-def inventory_search(products, item_name):
-    if item_name in products:
-        index = products.index(item_name)
-        print(f"{item_name} is present in the inventory.")
-        print(f"Index location: {index}")
-    else:
-        print(f"{item_name} is not present in the inventory.")
+# Active Inventory Catalog Manager
 
-products = ["macbook", "laptop", "tablet", "keyboard", "mouse"]
+inventory = [
+    "Laptop",
+    "Mouse",
+    "Keyboard",
+    "Monitor",
+    "Printer",
+    "Headphones",
+    "Webcam",
+    "USB Cable"
+]
 
-item_name = input("Enter the product name to search: ")
+print("=== Inventory Catalog Manager ===")
 
-inventory_search(products, item_name)
+item = input("Enter the product name to search: ").strip()
+
+# Search for the item
+if item in inventory:
+    index = inventory.index(item)
+    print(f"Item found: {item}")
+    print(f"Index location: {index}")
+else:
+    print(f"Item '{item}' was not found in the inventory.")
